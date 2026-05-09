@@ -5,21 +5,21 @@
 class Ghealth < Formula
   desc "Unofficial Google-Health-CLI for the Google Health API"
   homepage "https://github.com/rudrankriyam/Google-Health-CLI"
-  version "1.0.2"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rudrankriyam/Google-Health-CLI/releases/download/v1.0.2/ghealth_1.0.2_darwin_amd64.tar.gz"
-      sha256 "cf8aa3251045a7831c090f11b0d9dfd20f2e16bd564fbe146c83019e5f9793d9"
+      url "https://github.com/rudrankriyam/Google-Health-CLI/releases/download/1.0.0/ghealth_1.0.0_darwin_amd64.tar.gz"
+      sha256 "338d9d546e8fc16c589176a03e33df25ca956cda564d5683a4981c3b79cbc628"
 
       define_method(:install) do
         bin.install "ghealth"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rudrankriyam/Google-Health-CLI/releases/download/v1.0.2/ghealth_1.0.2_darwin_arm64.tar.gz"
-      sha256 "fcb006ac7e8d5bfdf2756125836b7f2561b6194bad75c332f6cbc355ec9199ab"
+      url "https://github.com/rudrankriyam/Google-Health-CLI/releases/download/1.0.0/ghealth_1.0.0_darwin_arm64.tar.gz"
+      sha256 "90cd431f2047bf25937d1c637ba40eeb23e31d49a4e6efc041a885e4f7da967a"
 
       define_method(:install) do
         bin.install "ghealth"
@@ -29,15 +29,15 @@ class Ghealth < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rudrankriyam/Google-Health-CLI/releases/download/v1.0.2/ghealth_1.0.2_linux_amd64.tar.gz"
-      sha256 "ae792f6e16f727dedde0b690cfa5039838e659df18cbe45498abca6aea457ab8"
+      url "https://github.com/rudrankriyam/Google-Health-CLI/releases/download/1.0.0/ghealth_1.0.0_linux_amd64.tar.gz"
+      sha256 "7952c32e58bc13f49969e7c5598864abaa5e7205ca332c94e1fa99491c8e1d3d"
       define_method(:install) do
         bin.install "ghealth"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rudrankriyam/Google-Health-CLI/releases/download/v1.0.2/ghealth_1.0.2_linux_arm64.tar.gz"
-      sha256 "2e4d99b052f1680579ad65d466a41867d80df26736e611c390e3a4d277c672cb"
+      url "https://github.com/rudrankriyam/Google-Health-CLI/releases/download/1.0.0/ghealth_1.0.0_linux_arm64.tar.gz"
+      sha256 "f264299b6314957f788c34d591e52ccb40bfe04beff647066f50c27cf2a7a26c"
       define_method(:install) do
         bin.install "ghealth"
       end

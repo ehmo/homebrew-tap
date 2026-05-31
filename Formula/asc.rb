@@ -2,32 +2,32 @@
 # frozen_string_literal: true
 
 class Asc < Formula
-  desc "A fast, AI-agent friendly CLI for App Store Connect"
-  homepage 'https://github.com/rudrankriyam/App-Store-Connect-CLI'
-  version '1.2.2'
-  license 'MIT'
+  desc "Fast, AI-agent friendly CLI for App Store Connect"
+  homepage "https://github.com/rorkai/App-Store-Connect-CLI"
+  version "1.8.0"
+  license "MIT"
 
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/rudrankriyam/App-Store-Connect-CLI/releases/download/1.2.2/asc_1.2.2_macOS_arm64'
-      sha256 'a5ef2ee92760d671849d423be3206eec0a2d1a176a8f1bb61138f230b393391d'
+      url "https://github.com/rorkai/App-Store-Connect-CLI/releases/download/1.8.0/asc_1.8.0_macOS_arm64"
+      sha256 "8192e253148a9764071dcbe081e5c6af30a7e0fd05eb9ff0304a83f166d7fb1f"
     else
-      url 'https://github.com/rudrankriyam/App-Store-Connect-CLI/releases/download/1.2.2/asc_1.2.2_macOS_amd64'
-      sha256 'f417dc6b1cad0364d235883981c01e81fdfaf7a5b05ff9a010299bd026ddde0a'
+      url "https://github.com/rorkai/App-Store-Connect-CLI/releases/download/1.8.0/asc_1.8.0_macOS_amd64"
+      sha256 "ef3ad4689fb5fb360afe71db05aa705695916f5126a0b0d4b132b7b48e7957c9"
     end
   end
 
   def install
     if Hardware::CPU.arm?
-      bin.install 'asc_1.2.2_macOS_arm64' => 'asc'
+      bin.install "asc_1.8.0_macOS_arm64" => "asc"
     else
-      bin.install 'asc_1.2.2_macOS_amd64' => 'asc'
+      bin.install "asc_1.8.0_macOS_amd64" => "asc"
     end
   end
 
   test do
-    assert_match "asc is a fast, lightweight cli", shell_output("#{bin}/asc --help")
+    assert_match version.to_s, shell_output("#{bin}/asc --version")
   end
 end

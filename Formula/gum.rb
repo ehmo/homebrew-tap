@@ -2,6 +2,7 @@ class Gum < Formula
   desc "Google Universal MCP CLI and stdio server"
   homepage "https://github.com/ehmo/gum"
   version "1.0.0"
+  revision 1
   license "FSL-1.1-ALv2"
 
   on_macos do
@@ -27,8 +28,13 @@ class Gum < Formula
   end
 
   def install
-    bin.install "gum"
-    quiet_system "xattr", "-d", "com.apple.quarantine", bin/"gum" if OS.mac?
+    libexec.install "gum"
+    bin.write_exec_script libexec/"gum"
+
+    return unless OS.mac?
+
+    quiet_system "xattr", "-d", "com.apple.quarantine", libexec/"gum"
+    quiet_system "codesign", "--force", "--sign", "-", libexec/"gum"
   end
 
   test do

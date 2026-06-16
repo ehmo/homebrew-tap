@@ -28,6 +28,7 @@ class Gum < Formula
 
   def install
     bin.install "gum"
+    quiet_system "xattr", "-d", "com.apple.quarantine", bin/"gum" if OS.mac?
   end
 
   test do

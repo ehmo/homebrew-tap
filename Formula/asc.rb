@@ -19,6 +19,11 @@ class Asc < Formula
     end
   end
 
+  on_linux do
+    url "https://github.com/rorkai/App-Store-Connect-CLI/archive/refs/tags/1.8.0.tar.gz"
+    sha256 "202a2b57b536e10b5d565e08052126fd58265cb213e7592f6ee9949b69e75f3a"
+  end
+
   def install
     if Hardware::CPU.arm?
       bin.install "asc_1.8.0_macOS_arm64" => "asc"

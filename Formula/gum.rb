@@ -1,7 +1,6 @@
 class Gum < Formula
   desc "Google Universal MCP CLI and stdio server"
   homepage "https://github.com/ehmo/gum"
-  version "1.0.2"
   license "MIT"
 
   on_macos do

@@ -5,23 +5,23 @@ class Gum < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/ehmo/gum/releases/download/v1.1.0/gum_1.1.0_darwin_amd64.tar.gz"
-      sha256 "58341a27836718d53afef5d54925e533432e689a5cfb77991af0b7f598e78e34"
+      url "https://github.com/ehmo/gum/releases/download/v1.2.0/gum_1.2.0_darwin_amd64.tar.gz"
+      sha256 "53532d4527a25897f4071df305102877d51d48e6f6d9bc30a105478a8dfd8128"
     end
     on_arm do
-      url "https://github.com/ehmo/gum/releases/download/v1.1.0/gum_1.1.0_darwin_arm64.tar.gz"
-      sha256 "f4fc6ddc8e40da6b0526046039e3d4902144393389918113953a877044cf741f"
+      url "https://github.com/ehmo/gum/releases/download/v1.2.0/gum_1.2.0_darwin_arm64.tar.gz"
+      sha256 "2d15a7ed6ad8263cd6dd80f61afd57040c56c177c5838fe15a9c055684c5cfb8"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/ehmo/gum/releases/download/v1.1.0/gum_1.1.0_linux_amd64.tar.gz"
-      sha256 "0c55a1eabc45390380908ae74e2e6e596dffe8fe3904215b44c4afdab588e43d"
+      url "https://github.com/ehmo/gum/releases/download/v1.2.0/gum_1.2.0_linux_amd64.tar.gz"
+      sha256 "f11cb1e7df38069921eb11dda7d82bb57474bbd672289aefb2250aa4a60ffb29"
     end
     on_arm do
-      url "https://github.com/ehmo/gum/releases/download/v1.1.0/gum_1.1.0_linux_arm64.tar.gz"
-      sha256 "20d054a6190966025d7d5c66018908e5230e7418d79f7b287861ddf2bcd881be"
+      url "https://github.com/ehmo/gum/releases/download/v1.2.0/gum_1.2.0_linux_arm64.tar.gz"
+      sha256 "8fcd1425088ad86765bda1bb43829bab2406658155701c766c94905173b3c16e"
     end
   end
 

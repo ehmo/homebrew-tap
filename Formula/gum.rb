@@ -26,13 +26,12 @@ class Gum < Formula
   end
 
   def install
+    # Install the published binary byte for byte. brew fetches over curl, which
+    # sets no com.apple.quarantine attribute, and the Go linker already ad-hoc
+    # signs the darwin builds. Stripping quarantine or re-signing here would
+    # only rewrite the file and break its match with release-binaries.sha256.
     libexec.install "gum"
     bin.write_exec_script libexec/"gum"
-
-    return unless OS.mac?
-
-    quiet_system "xattr", "-d", "com.apple.quarantine", libexec/"gum"
-    quiet_system "codesign", "--force", "--sign", "-", libexec/"gum"
   end
 
   test do
